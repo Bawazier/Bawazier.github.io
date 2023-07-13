@@ -11,6 +11,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="card" style="width: 18rem">
@@ -33,5 +34,45 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- add carousel -->
+    <div id="playlist-carousel" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#playlist-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#playlist-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#playlist-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2023/01/27/elephantjpg-20230127042848.jpg" class="d-block w-100 c-img" alt="Slide 1">
+          <div class="carousel-caption">
+            <p>First slide label</p>
+            <h2>Gajah bepergian sebagai kelompok keluarga diidentifikasi dari udara, dan bergerak sebagai unit sosial.</h2>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2023/04/14/3jpg-20230414021918.jpg" class="d-block w-100 c-img" alt="Slide 2">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Second slide label</p>
+            <h2>Serigala Timur Berevolusi Terpisah dari Serigala Abu-Abu.</h2>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2021/06/11/whatsapp-image-2021-06-05-at-19-20210611071404.jpeg" class="d-block w-100 c-img" alt="Slide 3">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Third slide label</p>
+            <h2>Merak Hijau di Taman Nasional Alas Purwo.</h2>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#playlist-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#playlist-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </body>
 </html>

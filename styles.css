@@ -44,3 +44,12 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
+.c-item {
+  height: 500px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+}
