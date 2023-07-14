@@ -46,10 +46,81 @@ h1 {
 }
 
 .c-item {
-  height: 500px;
+  height: 900px;
 }
 
 .c-img {
-  height: 100%;
+  height: 100vh;
+  width: 100%;
   object-fit: cover;
+}
+
+.container {
+  padding: 80px 10%;
+}
+
+.baris {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.subscribe-kiri {
+  flex-basis: 45%;
+}
+
+.subscribe-kanan {
+  flex-basis: 45%;
+}
+
+.subscribe-kiri h3 {
+  margin-top: 15%;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.subscribe-kiri p {
+  margin: 10px 0 50px;
+}
+
+.subscribe-kanan form {
+  width: 100%;
+}
+
+form input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #f4f1d6;
+  padding: 15px;
+  margin: 15px 0;
+  color: #262626;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+form button {
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  margin-top: -10px;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+  background: #ffffff;
+  margin-top: 100px;
+}
+
+#msg {
+  color: #262626;
+  margin-top: 5px;
+  margin-left: 15px;
+  display: block;
+  font-size: small;
+  font-style: italic;
 }

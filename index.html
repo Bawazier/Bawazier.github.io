@@ -74,5 +74,48 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
+    <!-- area subscribe -->
+    <div class="container">
+      <div class="baris">
+        <div class="subscribe-kiri">
+          <h3>Coming Soon!</h3>
+          <p>Subscribe and stay updated with the latest information.</p>
+        </div>
+
+        <div class="subscribe-kanan">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Nama" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <button type="submit" class="btn btn2">Subscribe</button>
+        </form>
+        <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright &copy; 2023 - nationalgeographic-clone. All rights reserved</p>
+    </div>
+  </div>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyyazJgRihFeypn9PPBY9vXBuZV9s8PXsKMVvCOkBVJTapC834s8E0fc4W8HFgRTdgxmQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Thank You For Subscribing!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
   </body>
 </html>
