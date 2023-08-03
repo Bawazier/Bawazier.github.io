@@ -18,6 +18,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/6.0.3/mediaelement-and-player.min.js"
+      integrity="sha512-AhAXsap4ifuxnxbf5tcwE7M2hTjpQ0SA3plzg5oYaTuZ51OWCuLimANBtfGmJg+DFVZV9jmB1mO3oOa8C/+lzw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body
     style="
@@ -33,7 +39,7 @@
 
     <nav
       class="navbar navbar-expand-xl text-bg-success h-75"
-      style="background: linear-gradient(#00a900, #008900); margin-top: -5px"
+      style="background: linear-gradient(#00a900, #008900); margin-top: -7px"
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -91,7 +97,7 @@
       </div>
     </nav>
     <section
-      class="border w-100"
+      class="w-100"
       style="background-color: #000; min-width: 100%; position: relative"
     >
       <div style="height: 100%; position: absolute; width: 100%; z-index: 0">
@@ -158,10 +164,11 @@
       </div>
       <div
         style="
-          margin: 0;
-          padding: 16px 16px 60px;
+          margin: 0 auto;
+          padding: 20px 0 60px;
           position: relative;
           width: 100%;
+          max-width: 1024px;
         "
       >
         <div
@@ -170,12 +177,10 @@
           <video
             src="https://www.petanikode.com/img/html-video/cat-herd.webm"
             loop
-            class="w-75 h-75"
             controls
-            autoplay
             style="
               opacity: 1;
-              /* pointer-events: none; */
+              pointer-events: all;
               transition: opacity 0.5s ease-in 0s;
               z-index: 2;
               border: none;
@@ -192,7 +197,44 @@
             "
           ></video>
         </div>
+        <div class="Caption_Wrap">
+          <div style="line-height: 1.5; margin: 16px 0 8px">
+            <h1
+              class="fw-bolder fs-5"
+              style="
+                color: #fff;
+                letter-spacing: 3px;
+                margin-bottom: 8px;
+                text-transform: uppercase;
+              "
+            >
+              Going Gaga Over Goslings
+            </h1>
+          </div>
+          <div>
+            <p
+              style="
+                color: #fff;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 0.1px;
+              "
+            >
+              Dr. Pol breaks down the differences between a goose, geese and a
+              gander in these fast facts.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+    <video width="640" height="360" id="player1" preload="none">
+      <source
+        type="video/youtube"
+        src="http://www.youtube.com/watch?v=nOEw9iiopwI"
+      />
+    </video>
+    <script>
+      var player = new MediaElementPlayer("#player1");
+    </script>
   </body>
 </html>
