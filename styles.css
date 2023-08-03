@@ -44,3 +44,150 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
+.container-carousel {
+  padding: 10px 10%;
+  /* border: 3px solid #000; */
+}
+
+.page-header {
+  margin-top: 100px;
+  /* margin-bottom: -30px; */
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+
+.c-item {
+  height: 900px;
+}
+
+.c-img {
+  /* height: 100vh; */
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-item iframe {
+  /* border: #000 50px solid; */
+  padding: 70px 10%;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev {
+  /* border: 3px solid #000; */
+  top: 40%;
+  bottom: 40%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  /* border: 3px solid #000; */
+  background-color: #555;
+}
+
+.carousel-control-next {
+  /* border: 3px solid #000; */
+  top: 40%;
+  bottom: 40%;
+}
+
+.carousel-indicators {
+  /* border: 3px solid #000; */
+  /* transform: translateY(-50px); */
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  z-index: 15;
+  width: 60%;
+  margin-right: 20px;
+  list-style: none;
+  text-align: center;
+}
+
+button .carousel-indicators {
+  border: 3px solid #000;
+}
+
+/* .container {
+  padding: 80px 10%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+} */
+
+.row {
+  height: 100%;
+  width: 100%;
+}
+
+.baris {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.subscribe-kiri {
+  flex-basis: 45%;
+}
+
+.subscribe-kanan {
+  flex-basis: 45%;
+}
+
+.subscribe-kiri h3 {
+  margin-top: 15%;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.subscribe-kiri p {
+  margin: 10px 0 50px;
+}
+
+.subscribe-kanan form {
+  width: 100%;
+}
+
+form input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #f4f1d6;
+  padding: 15px;
+  margin: 15px 0;
+  color: #262626;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+form button {
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  margin-top: -10px;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+  background: #ffffff;
+  margin-top: 100px;
+}
+
+#msg {
+  color: #262626;
+  margin-top: 5px;
+  margin-left: 15px;
+  display: block;
+  font-size: small;
+  font-style: italic;
+}
