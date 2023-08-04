@@ -35,7 +35,6 @@
         Your browser does not support the audio element.
       </audio>
     </div>
-    
 
     <nav class="navbar navbar-expand-xl text-bg-success h-75 BottomNavBar">
       <div class="container-fluid">
@@ -60,13 +59,19 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-center text-light fw-bolder" href="#article">
+            <a
+              class="nav-link text-center text-light fw-bolder"
+              href="#article"
+            >
               <i class="fa-solid fa-newspaper fa-xl my-4"></i><br />
               ARTICLE</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-center text-light fw-bolder" href="#more-videos">
+            <a
+              class="nav-link text-center text-light fw-bolder"
+              href="#more-videos"
+            >
               <i class="fa-solid fa-compress fa-xl my-4"></i><br />
               EXPLORE MORE</a
             >
@@ -110,12 +115,14 @@
       </div>
       <div class="GeneralContainer">
         <div class="VideoPlayerContainer">
-          <video
-            src="https://www.petanikode.com/img/html-video/cat-herd.webm"
+          <!-- <video
             loop
             controls
             class="VideoPlayer"
-          ></video>
+          >
+          <source id="video-iframe-1" src="https://www.youtube.com/embed/ABC123" type="text/html">
+        </video> -->
+        <iframe class="VideoPlayer" src="https://www.youtube.com/embed/_otK1y2DAnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen alt="Slide 1" id="video-iframe-1"></iframe>
         </div>
         <div class="CaptionWrap">
           <div class="CaptionTitle">
@@ -179,26 +186,42 @@
 
     <section id="more-videos">
       <object
-      type="text/html"
-      data="more-videos.html"
-      style="width: 100%; height: 80vh"
-    ></object>
+        type="text/html"
+        data="more-videos.html"
+        style="width: 100%; height: 80vh"
+      ></object>
     </section>
 
     <section id="subscribe">
       <object
-      type="text/html"
-      data="subscribe.html"
-      style="width: 100%; height: 55vh"
-    ></object>
+        type="text/html"
+        data="subscribe.html"
+        id="videoFrame"
+        style="width: 100%; height: 55vh"
+      ></object>
     </section>
 
     <div class="copyright">
       <p>
-        COPYRIGHT &copy; 2023 - PW TEAM IT 203 MUHAMMAD-RENDY-RIYADI. ALL RIGHTS RESERVED
+        COPYRIGHT &copy; 2023 - PW TEAM IT 203 MUHAMMAD-RENDY-RIYADI. ALL RIGHTS
+        RESERVED
       </p>
     </div>
 
-    
+    <script>
+      function handleVideoEvent(event) {
+        // Handle the message received from more-videos.html
+        console.log("Message received:", event.data);
+        var x = document.getElementById("video-iframe-1");
+        console.log({ x });
+        x.src = "https://www.youtube.com/embed/" + event.data;
+        window.location.href = "#videos-hero";
+
+        // Do something with the message received from more-videos.html
+      }
+
+      // Add a message event listener
+      window.addEventListener("message", handleVideoEvent, false);
+    </script>
   </body>
 </html>

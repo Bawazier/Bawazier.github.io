@@ -153,13 +153,13 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="js/carousel-multiple-items.js"></script>
 
     <script>
       function btnClick(idVideo) {
-        var x = document.getElementById("video-iframe-1");
-        x.src = "https://www.youtube.com/embed/" + idVideo;
-      }
+            const message = "Hello from More Videos!";
+            // Post a message to the parent (index.html)
+            parent.postMessage(idVideo, '*');
+        }
     </script>
   </body>
 </html>
