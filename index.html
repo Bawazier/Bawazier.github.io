@@ -18,7 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="carousel-multiple-items.css" />
+    <link rel="stylesheet" href="styles/hero-section.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/6.0.3/mediaelement-and-player.min.js"
       integrity="sha512-AhAXsap4ifuxnxbf5tcwE7M2hTjpQ0SA3plzg5oYaTuZ51OWCuLimANBtfGmJg+DFVZV9jmB1mO3oOa8C/+lzw=="
@@ -27,22 +27,17 @@
     ></script>
   </head>
 
-  <body
-    style="
-      font-family: GeoBrandBold, CenturyGothic, AppleGothic, Gill Sans,
-        Gill Sans MT, sans-serif;
-    "
-  >
-    <audio controls autoplay muted class="w-100" style="background: #008900">
-      <source src="assets/birds_sound.ogg" type="audio/ogg" />
-      <source src="assets/birds_sound.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
+  <body>
+    <div class="w-100" style="background: #008900">
+      <audio controls autoplay muted class="w-25" style="background: #008900">
+        <source src="assets/birds_sound.ogg" type="audio/ogg" />
+        <source src="assets/birds_sound.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    
 
-    <nav
-      class="navbar navbar-expand-xl text-bg-success h-75"
-      style="background: linear-gradient(#00a900, #008900); margin-top: -7px"
-    >
+    <nav class="navbar navbar-expand-xl text-bg-success h-75 BottomNavBar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
@@ -56,39 +51,31 @@
         <ul class="nav justify-content-center gap-4">
           <li class="nav-item">
             <a
-              class="nav-link active text-center text-light fw-bolder"
-              style="font-size: 1.125rem"
+              class="nav-link text-center text-light fw-bolder"
               aria-current="page"
-              href="#"
+              href="#videos-hero"
             >
               <i class="fa-solid fa-circle-play fa-xl my-4"></i><br />
               VIDEOS</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link text-center text-light fw-bolder"
-              style="font-size: 1.125rem"
-              href="#"
-            >
+            <a class="nav-link text-center text-light fw-bolder" href="#article">
               <i class="fa-solid fa-newspaper fa-xl my-4"></i><br />
               ARTICLE</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link text-center text-light fw-bolder"
-              style="font-size: 1.125rem"
-              href="#"
-            >
+            <a class="nav-link text-center text-light fw-bolder" href="#more-videos">
               <i class="fa-solid fa-compress fa-xl my-4"></i><br />
               EXPLORE MORE</a
             >
           </li>
           <li class="nav-item">
             <a
-              class="nav-link text-center fw-bolder"
-              style="font-size: 1.125rem; color: #fc0"
+              class="nav-link active text-center fw-bolder"
+              style="color: #fc0"
+              href="#subscribe"
             >
               <i class="fa-solid fa-pen-to-square fa-xl my-4"></i><br />
               SUBSCRIBE</a
@@ -98,130 +85,44 @@
         <div></div>
       </div>
     </nav>
-    <section
-      class="w-100"
-      style="background-color: #000; min-width: 100%; position: relative"
-    >
-      <div style="height: 100%; position: absolute; width: 100%; z-index: 0">
-        <div
-          style="
-            display: block;
-            height: 100%;
-            overflow: hidden;
-            position: relative;
-          "
-        >
-          <div
-            style="padding-bottom: 56.26%; overflow: hidden; position: relative"
-          ></div>
+    <section class="w-100 FrameBackgroundFull" id="videos-hero">
+      <div class="w-100 h-100 BackgroundImageContainer">
+        <div class="BackgroundImage">
+          <div class="RatioFrame"></div>
           <span
+            class="Image LowRes"
             style="
-              filter: blur();
-              transform: scale(1, 1);
-              background-repeat: no-repeat;
-              background-size: cover;
-              bottom: 0;
-              height: 100%;
-              left: 0;
-              position: absolute;
-              right: 0;
-              top: 0;
               background-position: left center;
               transition: transform 0.25s ease 0s, opacity 0.5s ease 0s;
               background-image: url('https://i.natgeofe.com/k/47fe7b95-4879-42fc-9acb-9fe39e4c91d6/yellowtheme.jpg?w=767&h=431');
             "
           ></span>
           <span
+            class="Image Visible"
             style="
-              opacity: 1;
-              filter: blur();
-              transform: scale(1, 1);
-              background-repeat: no-repeat;
-              background-size: cover;
-              bottom: 0;
-              height: 100%;
-              left: 0;
-              position: absolute;
-              right: 0;
-              top: 0;
               background-position: left center;
               transition: transform 0.25s ease 0s, opacity 0.5s ease 0s;
               background-image: url('https://i.natgeofe.com/k/47fe7b95-4879-42fc-9acb-9fe39e4c91d6/yellowtheme.jpg?w=767&h=431');
             "
           ></span>
-          <div
-            style="
-              background-color: #000;
-              opacity: 0.1;
-              bottom: 0;
-              display: block;
-              left: 0;
-              position: absolute;
-              right: 0;
-              top: 0;
-              z-index: 1;
-            "
-          ></div>
+          <div class="TintOverlay"></div>
         </div>
       </div>
-      <div
-        style="
-          margin: 0 auto;
-          padding: 20px 0 60px;
-          position: relative;
-          width: 100%;
-          max-width: 1024px;
-        "
-      >
-        <div
-          style="padding-bottom: 56.26%; overflow: hidden; position: relative"
-        >
+      <div class="GeneralContainer">
+        <div class="VideoPlayerContainer">
           <video
             src="https://www.petanikode.com/img/html-video/cat-herd.webm"
             loop
             controls
-            style="
-              opacity: 1;
-              pointer-events: all;
-              transition: opacity 0.5s ease-in 0s;
-              z-index: 2;
-              border: none;
-              height: 100%;
-              width: 100%;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              top: 0;
-              position: absolute;
-              display: block;
-              margin: 0 auto;
-              max-width: 100%;
-            "
+            class="VideoPlayer"
           ></video>
         </div>
-        <div class="Caption_Wrap">
-          <div style="line-height: 1.5; margin: 16px 0 8px">
-            <h1
-              class="fw-bolder fs-5"
-              style="
-                color: #fff;
-                letter-spacing: 3px;
-                margin-bottom: 8px;
-                text-transform: uppercase;
-              "
-            >
-              Going Gaga Over Goslings
-            </h1>
+        <div class="CaptionWrap">
+          <div class="CaptionTitle">
+            <h1 class="fw-bolder fs-5 RichText">Going Gaga Over Goslings</h1>
           </div>
-          <div>
-            <p
-              style="
-                color: #fff;
-                font-size: 14px;
-                font-weight: 400;
-                letter-spacing: 0.1px;
-              "
-            >
+          <div class="CaptionText">
+            <p class="Truncate">
               Dr. Pol breaks down the differences between a goose, geese and a
               gander in these fast facts.
             </p>
@@ -229,211 +130,31 @@
         </div>
       </div>
     </section>
-    <video width="640" height="360" id="player1" preload="none">
-      <source
-        type="video/youtube"
-        src="http://www.youtube.com/watch?v=nOEw9iiopwI"
-      />
-    </video>
-    <script>
-      var player = new MediaElementPlayer("#player1");
-    </script>
 
-    <!-- add carousel -->
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col">
-          <iframe height="100%" src="https://www.youtube.com/embed/_otK1y2DAnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="c-img" alt="Slide 1" id="video-iframe-1"></iframe>
-        </div>
-      </div>
-    </div> -->
-    <div class="container-carousel">
-      <div class="page-header">
-        <h1>Animal Showdown</h1>
-      </div>
-
-      <div id="playlist-carousel" class="carousel slide" data-ride="carousel">
-        <!-- <div class="carousel-indicators">
-          <button type="button" data-bs-target="#playlist-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#playlist-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#playlist-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div> -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="card">
-              <div class="img-wrapper">
-                <img
-                  src="images/cat-vs-dog.png"
-                  onclick="btnClick('Yn7mxNQjnkU')"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Cat vs Dog</h5>
-                <p class="card-text">Who is the Best Friends for Human?</p>
-                <!-- <a href="#" class="btn btn-primary">Go back to header section (Video).</a> -->
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="card">
-              <div class="img-wrapper">
-                <img
-                  src="images/elephant-vs-ant.png"
-                  onclick="btnClick('_otK1y2DAnI')"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Elephant vs Ant</h5>
-                <p class="card-text">Who is the Strongest here?</p>
-                <!-- <a href="#" class="btn btn-primary">Go back to header section (Video).</a> -->
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="card">
-              <div class="img-wrapper">
-                <img
-                  src="images/sloth-vs-koala.PNG"
-                  onclick="btnClick('QOzG0JiXOe4')"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Sloth vs Koala</h5>
-                <p class="card-text">Who is the Laziest between these guys?</p>
-                <!-- <a href="#" class="btn btn-primary">Go back to header section (Video).</a> -->
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="card">
-              <div class="img-wrapper">
-                <img
-                  src="images/reptile-vs-croc.PNG"
-                  onclick="btnClick('ApKplVTl42s')"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Flying Reptile vs Colossal Crocodile</h5>
-                <p class="card-text">
-                  Who will take the Title of Pre-Historic Baddie?
-                </p>
-                <!-- <a href="#" class="btn btn-primary">Go back to header section (Video).</a> -->
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="card">
-              <div class="img-wrapper">
-                <img
-                  src="images/whale-vs-argentino.PNG"
-                  onclick="btnClick('hNSs2gxDZcg')"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Whale</h5>
-                <p class="card-text">Who is the Biggest Animal here?</p>
-                <!-- <a href="#" class="btn btn-primary">Go back to header section (Video).</a> -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#playlist-carousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#playlist-carousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-
-    <div style="background-color: #fff; min-width: 100%; position: relative">
-      <div
-        style="
-          padding-right: 15%;
-          height: 100%;
-          position: absolute;
-          width: 100%;
-          z-index: 0;
-        "
-      >
-        <div style="height: 100%; max-height: 100%; padding-right: 15%; display: block;
-        height: 100%;
-        overflow: hidden;
-        position: relative;">
+    <section class="w-100 FrameBackgroundFull" aria-hidden="true" id="article">
+      <div class="w-100 h-100 BackgroundImageContainer">
+        <div class="BackgroundImage">
+          <div class="RatioFrame"></div>
           <span
+            class="Image LowRes"
             style="
               background-position: center center;
               transition: transform 0.25s ease 0s, opacity 0.5s ease 0s;
-              background-image: url('https://i.natgeofe.com/k/a85e69c8-95aa-4304-ab96-4a23e1c83549/1900x1068__quizwhiz_sponsor.jpg?w=1890&h=1062');
-              filter: blur(8px);
-              transform: scale(1, 1);
-              background-repeat: no-repeat;
-              background-size: cover;
-              bottom: 0;
-              height: 100%;
-              left: 0;
-              position: absolute;
-              right: 0;
-              top: 0;
+              background-image: url('https://i.natgeofe.com/k/448e03c1-5153-46b7-8608-7ad57a3eabd0/winter-northernlights-homepage.jpg?w=413&h=276');
             "
           ></span>
           <span
+            class="Image Visible"
             style="
-              opacity: 1;
               background-position: center center;
               transition: transform 0.25s ease 0s, opacity 0.5s ease 0s;
-              background-image: url('https://i.natgeofe.com/k/a85e69c8-95aa-4304-ab96-4a23e1c83549/1900x1068__quizwhiz_sponsor.jpg?w=1890&h=1062');
-              background-repeat: no-repeat;
-              background-size: cover;
-              bottom: 0;
-              height: 100%;
-              left: 0;
-              position: absolute;
-              right: 0;
-              top: 0;
+              background-image: url('https://i.natgeofe.com/k/448e03c1-5153-46b7-8608-7ad57a3eabd0/winter-northernlights-homepage.jpg?w=413&h=276');
             "
           ></span>
-          <div
-            style="
-              background: linear-gradient(
-                90deg,
-                hsla(0, 0%, 100%, 0) 18%,
-                #fff 83%
-              );
-              height: 100%;
-              /* left: inherit; */
-              max-height: 100%;
-              opacity: 1;
-              padding-right: 15%;
-              width: 100%;
-              bottom: 0;
-              display: block;
-              /* left: 0; */
-              position: absolute;
-              right: 0;
-              top: 0;
-              z-index: 1;
-            "
-          ></div>
+          <div class="TintOverlayGradient"></div>
         </div>
       </div>
+      <div style="padding: 55px 0"></div>
       <div
         style="
           padding: 20px 0 60px;
@@ -443,86 +164,41 @@
           padding: 0 16px 60px;
           position: relative;
           width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         "
       >
-        <div class="container">
-          <div class="baris">
-            <div class="subscribe-kiri">
-              <h3>Coming Soon!</h3>
-              <p>Subscribe and stay updated with the latest information.</p>
-            </div>
-
-            <div class="subscribe-kanan">
-              <form name="submit-to-google-sheet">
-                <input
-                  type="text"
-                  name="Nama"
-                  placeholder="Your Name"
-                  required
-                />
-                <input
-                  type="email"
-                  name="Email"
-                  placeholder="Your Email"
-                  required
-                />
-                <button type="submit" class="btn btn2">Subscribe</button>
-              </form>
-              <span id="msg"></span>
-            </div>
-          </div>
-        </div>
+        <object
+          type="text/html"
+          data="article.html"
+          style="width: 100%; height: 510px; margin-top: 60px"
+        ></object>
       </div>
-    </div>
+    </section>
 
-    <!-- area subscribe -->
+    <section id="more-videos">
+      <object
+      type="text/html"
+      data="more-videos.html"
+      style="width: 100%; height: 80vh"
+    ></object>
+    </section>
+
+    <section id="subscribe">
+      <object
+      type="text/html"
+      data="subscribe.html"
+      style="width: 100%; height: 55vh"
+    ></object>
+    </section>
 
     <div class="copyright">
       <p>
-        Copyright &copy; 2023 - nationalgeographic-clone. All rights reserved
+        COPYRIGHT &copy; 2023 - PW TEAM IT 203 MUHAMMAD-RENDY-RIYADI. ALL RIGHTS RESERVED
       </p>
     </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.min.js"
-      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="carousel-multiple-items.js"></script>
-
-    <script>
-      function btnClick(idVideo) {
-        var x = document.getElementById("video-iframe-1");
-        x.src = "https://www.youtube.com/embed/" + idVideo;
-      }
-    </script>
-
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbyyazJgRihFeypn9PPBY9vXBuZV9s8PXsKMVvCOkBVJTapC834s8E0fc4W8HFgRTdgxmQ/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, {
-          method: "POST",
-          body: new FormData(form),
-        })
-          .then((response) => {
-            msg.innerHTML = "Thank You For Subscribing!";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
+    
   </body>
 </html>

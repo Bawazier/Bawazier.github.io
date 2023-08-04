@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: GeoBrandBold, CenturyGothic, AppleGothic, Gill Sans, Gill Sans MT,
+    sans-serif;
+  color: black;
+  background-color: white;
+}
+
+.BottomNavBar {
+  background: linear-gradient(#00a900, #008900);
+  margin-top: -7px;
+}
+
+.BottomNavBar .nav-link {
+  font-size: 1.125rem;
+}
+
+.BottomNavBar .nav-link .active {
+  color: #fc0;
+}
+
+.FrameBackgroundFull {
+  background-color: #000;
+  min-width: 100%;
+  position: relative;
+}
+
+.FrameBackgroundFull .BackgroundImageContainer {
+  position: absolute;
+  z-index: 0;
+}
+
+.BackgroundImage {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.RatioFrame {
+  padding-bottom: 56.26%;
+  overflow: hidden;
+  position: relative;
+}
+
+.BackgroundImage .Image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.BackgroundImage .Image .LowRes {
+  filter: blur();
+  transform: scale(1, 1);
+}
+
+.BackgroundImage .Image .Visible {
+  opacity: 1;
+}
+
+.TintOverlay {
+  background-color: #000;
+  opacity: 0.1;
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.TintOverlayGradient {
+    background-color: transparent;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),to(#fff));
+    background-image: -o-linear-gradient(top,transparent 0,#fff 100%);
+    background-image: linear-gradient(-180deg,transparent,#fff);
+    opacity: 1;
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+.GeneralContainer {
+  margin: 0 auto;
+  padding: 20px 0 60px;
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+}
+
+.VideoPlayerContainer {
+  padding-bottom: 56.26%;
+  overflow: hidden;
+  position: relative;
+}
+
+.VideoPlayerContainer .VideoPlayer {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.5s ease-in 0s;
+  z-index: 2;
+  border: none;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.CaptionWrap .CaptionTitle {
+  line-height: 1.5;
+  margin: 16px 0 8px;
+}
+
+.CaptionWrap .CaptionTitle .RichText {
+  color: #fff;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.CaptionWrap .CaptionText .Truncate {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    background: #ffffff;
+  }
+  
